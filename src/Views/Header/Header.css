@@ -1,0 +1,25 @@
+.wrapper {
+    height: 10%;
+    width: 100vw;
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-container {
+    display: flex;
+}
+
+.material-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    color: whitesmoke;
+}
+
+.logo {
+    color: whitesmoke;
+}
