@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
 
 .divButtons:hover {
@@ -36,7 +37,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#2d2f32, endColorstr=#1a1a1a);
 }
 
-.divButtons:selected {
+.divButtons:focus {
     border: 1px solid #151617;
     background-color: #2d2f32;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2f32), to(#1a1a1a));
@@ -50,5 +51,6 @@
 
 .menu {
     height: 100%;
+    width: 100%;
     display: flex;
 }

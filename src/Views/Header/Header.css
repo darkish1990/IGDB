@@ -1,5 +1,5 @@
 .wrapper {
-    height: 10%;
+    height: 7%;
     width: 100vw;
 }
 
@@ -8,18 +8,30 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-.menu-container {
-    display: flex;
+    height: 7vh;
 }
 
 .material-icons {
     display: flex;
     flex-direction: row-reverse;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 .logo {
     color: whitesmoke;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+.searchButton {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 10px;
+}
+
+.menu-container {
+    display: flex;
 }

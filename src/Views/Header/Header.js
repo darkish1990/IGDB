@@ -17,9 +17,7 @@ class Header extends React.Component {
         <div className="menu-container">
           <Menu className="Menu" />
         </div>
-
       </div>
-
     );
   }
 

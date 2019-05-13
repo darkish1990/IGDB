@@ -4,8 +4,8 @@ import './Footer.css';
 class Footer extends React.Component {
   render() {
     return (
-      <div className="Footer" >
-        <label>Copyrights Roey Liba .not Inked</label>
+      <div className="footer" >
+        <p> Copyrights Roey Liba .not Inked</p>
       </div>
     );
   }
