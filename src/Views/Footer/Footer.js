@@ -1,14 +1,14 @@
 import React from 'react';
 import './Footer.css';
 
-class Footer extends React.Component {
-  render() {
+function Footer() {
+  
     return (
       <div className="footer" >
         <p> Copyrights Roey Liba .not Inked</p>
       </div>
     );
-  }
+  
 
 }
 
