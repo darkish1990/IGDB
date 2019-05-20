@@ -1,13 +1,15 @@
 import React from 'react';
 import './Header.css';
 import Menu from '../Menu/Menu';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+
 
 function Header() {
 
   return (
     <div className="wrapper">
       <div className="topHeader">
-        <div className="logo">IGDB</div>
+        <div className="logo"><Link to={'/news'}>IGDB</Link></div>
         <div className="searchButton">
           <i className="material-icons">
             search

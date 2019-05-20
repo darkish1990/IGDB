@@ -1,16 +1,73 @@
 import React from 'react';
 import './Middle.css';
-import InjectedContent from '../InjectedContent/InjectedContent';
+import { networkInterfaces } from 'os';
 
-function Middle() {
+function Middle({ match }) {
+  console.log(match);
+  switch (match.path) {
 
-  return (
-    <div className="Middle" >
-      <InjectedContent />
-    </div>
-  );
+    case '/':
+      return (
+        <div className="Middle" >
+          <div id={match.path} className="InjectedContent" >
+          </div>
+        </div>
+      ); break;
+    case '/news':
+      return (
+        <div className="Middle" >
+          <div id={match.path} className="InjectedContent" >
+            <div className="card">{match.path}</div>
+            <div className="card"></div>
+            <div className="card"></div>
+          </div>
+        </div>
+      ); break;
+    case '/latestReviews':
+      return (
+        <div className="Middle" >
+          <div id={match.path} className="InjectedContent" >
+            <div className="card">{match.path}</div>
+            <div className="card"></div>
+            <div className="card"></div>
+          </div>
+        </div>
+      ); break;
+    case '/addReview':
+      return (
+        <div className="Middle" >
+          <div id={match.path} className="InjectedContent" >
+            <div className="superCard">{match.path}</div>
+          </div>
+        </div>
+      ); break;
+    case '/findReview':
+      return (
+        <div className="Middle" >
+          <div id={match.path} className="InjectedContent" >
+            <div className="card">{match.path}</div>
+            <div className="card"></div>
+            <div className="card"></div>
+            <div className="card"></div>
+          </div>
+        </div>
+      ); break;
+
+    default:
+      return (
+        <div className="Middle" >
+          <div className="InjectedContent" >
+          </div>
+        </div>
+      ); break;
+  }
+
 }
 
 
 
+
 export default Middle;
+
+function mainSwitcher(match) {
+}
