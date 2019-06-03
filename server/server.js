@@ -74,7 +74,7 @@ const usersScheme = new Schema({
 
 
 
-if (arguments == 'createReviews') {
+if (arguments.includes('createReviews')) {
     // create collection (model) with it's schema
     const reviewsModel = mongoose.model('reviews', reviewScheme);
 
@@ -86,7 +86,7 @@ if (arguments == 'createReviews') {
 
     });
 }
-if (arguments == 'createUsers') {
+if (arguments.includes('createUsers')) {
     // create collection (model) with it's schema
     const usersModel = mongoose.model('users', usersScheme);
 
@@ -99,7 +99,6 @@ if (arguments == 'createUsers') {
     });
 }
 
-// if (arguments == 'setNew') {
 
 //     MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
 //         if (err) throw err;

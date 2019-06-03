@@ -8,14 +8,15 @@ function Middle({ match }) {
 
     case '/':
       return (
-        <div className="Middle" >
+        <div className="middle" >
           <div id={match.path} className="InjectedContent" >
+            <div className="card"><h1>Welcome To IGDB</h1></div>
           </div>
         </div>
       ); break;
     case '/news':
       return (
-        <div className="Middle" >
+        <div className="middle" >
           <div id={match.path} className="InjectedContent" >
             <div className="card">{match.path}</div>
             <div className="card"></div>
@@ -25,7 +26,7 @@ function Middle({ match }) {
       ); break;
     case '/latestReviews':
       return (
-        <div className="Middle" >
+        <div className="middle" >
           <div id={match.path} className="InjectedContent" >
             <div className="card">{match.path}</div>
             <div className="card"></div>
@@ -35,7 +36,7 @@ function Middle({ match }) {
       ); break;
     case '/addReview':
       return (
-        <div className="Middle" >
+        <div className="middle" >
           <div id={match.path} className="InjectedContent" >
             <div className="superCard">{match.path}</div>
           </div>
@@ -43,7 +44,7 @@ function Middle({ match }) {
       ); break;
     case '/findReview':
       return (
-        <div className="Middle" >
+        <div className="middle" >
           <div id={match.path} className="InjectedContent" >
             <div className="card">{match.path}</div>
             <div className="card"></div>
