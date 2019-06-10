@@ -1,6 +1,9 @@
 import React from 'react';
 import './Middle.css';
 import { networkInterfaces } from 'os';
+import LatestReviews from './LatestReviews/LatestReviews';
+import AddReview from './AddReview/AddReview';
+import FindGameReview from './FindGameReview/FindGameReview';
 
 function Middle({ match }) {
   console.log(match);
@@ -14,44 +17,17 @@ function Middle({ match }) {
           </div>
         </div>
       ); break;
-    case '/news':
-      return (
-        <div className="middle" >
-          <div id={match.path} className="InjectedContent" >
-            <div className="card">{match.path}</div>
-            <div className="card"></div>
-            <div className="card"></div>
-          </div>
-        </div>
-      ); break;
     case '/latestReviews':
       return (
-        <div className="middle" >
-          <div id={match.path} className="InjectedContent" >
-            <div className="card">{match.path}</div>
-            <div className="card"></div>
-            <div className="card"></div>
-          </div>
-        </div>
+        <LatestReviews />
       ); break;
     case '/addReview':
       return (
-        <div className="middle" >
-          <div id={match.path} className="InjectedContent" >
-            <div className="superCard">{match.path}</div>
-          </div>
-        </div>
+        <AddReview/>
       ); break;
     case '/findReview':
       return (
-        <div className="middle" >
-          <div id={match.path} className="InjectedContent" >
-            <div className="card">{match.path}</div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-          </div>
-        </div>
+          <FindGameReview/>
       ); break;
 
     default:
@@ -70,5 +46,3 @@ function Middle({ match }) {
 
 export default Middle;
 
-function mainSwitcher(match) {
-}

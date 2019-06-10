@@ -13,7 +13,6 @@ function App() {
       <div className="App" >
         <Header />
         <Route path='/' component={Middle} />
-        <Route path='/news' component={Middle} />
         <Route path='/latestReviews' component={Middle} />
         <Route path='/addReview' component={Middle} />
         <Route path='/findReview' component={Middle} />

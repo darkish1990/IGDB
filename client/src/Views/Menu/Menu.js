@@ -6,9 +6,8 @@ function Menu() {
 
   return (
     <div className="menu" >
-      <div className='divButtons'><Link to={'/news'}>Steam News</Link></div>
-      <div className='divButtons'><Link to={'/addReview'}>Add A Review</Link></div>
       <div className='divButtons'><Link to={'/latestReviews'}>Latest Reviews</Link></div>
+      <div className='divButtons'><Link to={'/addReview'}>Add A Review</Link></div>
       <div className='divButtons'><Link to={'/findReview'}>Find Review</Link></div>
     </div>
   );
