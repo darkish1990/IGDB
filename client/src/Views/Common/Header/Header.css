@@ -1,6 +1,7 @@
 .wrapper {
     height: 7%;
     width: 100%;
+    position: fixed;
 }
 
 .topHeader {
@@ -26,12 +27,19 @@
     margin-left: 10px;
 }
 
-.searchButton {
+.searchAndProfileButtons {
     width: fit-content;
     height: fit-content;
     margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu-container {
     display: flex;
+}
+
+a {
+    text-decoration: unset !important;
+    margin-left: 5px;
 }

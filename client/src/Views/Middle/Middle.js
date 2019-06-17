@@ -9,32 +9,30 @@ function Middle({ match }) {
   console.log(match);
   switch (match.path) {
 
-    case '/':
-      return (
-        <div className="middle" >
-          <div id={match.path} className="InjectedContent" >
-            <div className="card"><h1>Welcome To IGDB</h1></div>
-          </div>
-        </div>
-      ); break;
+
     case '/latestReviews':
       return (
-        <LatestReviews />
+        <div className='middle'>
+          <LatestReviews />
+        </div>
       ); break;
     case '/addReview':
       return (
-        <AddReview/>
+        <div className='middle'>
+          <AddReview />
+        </div>
       ); break;
     case '/findReview':
       return (
-          <FindGameReview/>
+        <div className='middle'>
+          <FindGameReview />
+        </div>
       ); break;
 
     default:
       return (
-        <div className="Middle" >
-          <div className="InjectedContent" >
-          </div>
+        <div className='middle'>
+          <LatestReviews />
         </div>
       ); break;
   }

@@ -9,11 +9,14 @@ function Header() {
   return (
     <div className="wrapper">
       <div className="topHeader">
-        <div className="logo"><Link to={'/news'}>IGDB</Link></div>
-        <div className="searchButton">
+        <div className="logo"><Link to={'/'}>IGDB</Link></div>
+        <div className="searchAndProfileButtons">
           <i className="material-icons">
-            search
-              </i>
+            <Link to={'/'}>search</Link>
+          </i>
+          <i className="material-icons">
+            <Link to={'/'}>person</Link>
+          </i>
         </div>
       </div>
       <div className="menu-container">
