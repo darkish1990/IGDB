@@ -9,28 +9,28 @@ function LatestReviews() {
           <div className="container">
             <a className="card" href="#">
               <h3>This is a card</h3>
-              <p class="small">Card description with lots of great facts and interesting details.</p>
-              <div class="dimmer" />
-              <div class="go-corner" href="#" />
+              <p className="small">Card description with lots of great facts and interesting details.</p>
+              <div className="dimmer" />
+              <div className="go-corner" href="#" />
             </a>
             <a className="card" href="#">
               <h3>This is a card</h3>
-              <p class="small">Card description with lots of great facts and interesting details.</p>
-              <div class="dimmer" />
-              <div class="go-corner" href="#" />
+              <p className="small">Card description with lots of great facts and interesting details.</p>
+              <div className="dimmer" />
+              <div className="go-corner" href="#" />
             </a>
             <a className="card" href="#">
               <h3>This is a card</h3>
-              <p class="small">Card description with lots of great facts and interesting details.</p>
-              <div class="dimmer" />
-              <div class="go-corner" href="#" />
+              <p className="small">Card description with lots of great facts and interesting details.</p>
+              <div className="dimmer" />
+              <div className="go-corner" href="#" />
             </a>
 
             <a className="card" href="#">
               <h3>This is a card</h3>
-              <p class="small">Card description with lots of great facts and interesting details.</p>
-              <div class="dimmer" />
-              <div class="go-corner" href="#" />
+              <p className="small">Card description with lots of great facts and interesting details.</p>
+              <div className="dimmer" />
+              <div className="go-corner" href="#" />
             </a>
           </div>
         </div>
