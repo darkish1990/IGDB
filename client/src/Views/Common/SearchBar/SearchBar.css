@@ -1,0 +1,10 @@
+.SearchBar {
+    display: flex;
+}
+
+#searchTextArea {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+

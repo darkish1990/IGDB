@@ -30,10 +30,19 @@ h1 {
     border: 1px solid #f2f8f9;
 }
 
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
     display: block;
     position: relative;
-    max-width: 262px;
     background-color: #2d2f32;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2f32), to(#1a1a1a));
     background-image: -webkit-linear-gradient(top, #2d2f32, #1a1a1a);
@@ -56,8 +65,8 @@ h1 {
     top: -16px;
     right: -16px;
     background: whitesmoke;
-    height: 32px;
-    width: 32px;
+    height: 52px;
+    width: 52px;
     border-radius: 32px;
     -webkit-transform: scale(1);
     transform: scale(1);

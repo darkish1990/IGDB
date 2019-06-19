@@ -5,7 +5,10 @@ function SearchBar() {
 
   return (
     <div className="SearchBar" >
-      <input type="search" id="searchTextArea" placeholder="Which Game You're Looking For.." />
+      <input type="search" id="searchTextArea" placeholder="Which Game ?" />
+      <i className="material-icons">
+        search
+      </i>
     </div>
   );
 }

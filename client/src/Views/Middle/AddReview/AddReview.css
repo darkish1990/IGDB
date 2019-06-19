@@ -1,0 +1,12 @@
+p {
+    color: whitesmoke;
+    margin: 10px;
+}
+
+#gameReview {
+    min-height: 70px;
+}
+
+#submitReviewbtn {
+    margin-top: 15px;
+}

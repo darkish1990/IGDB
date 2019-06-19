@@ -10,12 +10,9 @@ function Header() {
     <div className="wrapper">
       <div className="topHeader">
         <div className="logo"><Link to={'/'}>IGDB</Link></div>
-        <div className="searchAndProfileButtons">
-          <i className="material-icons">
-            <Link to={'/'}>search</Link>
-          </i>
-          <i className="material-icons">
-            <Link to={'/'}>person</Link>
+        <div className="profileButton">
+          <i className="material-icons" id='profileIcon'>
+            <Link to={'/profile'}>person</Link>
           </i>
         </div>
       </div>
