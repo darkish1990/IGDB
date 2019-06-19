@@ -32,7 +32,6 @@ function Middle({ match }) {
     default:
       return (
         <div className='middle'>
-          <LatestReviews />
         </div>
       ); break;
   }
