@@ -13,21 +13,21 @@ function Middle({ match }) {
     case '/latestReviews':
       return (
         <LatestReviews />
-      ); break;
+      ); 
     case '/addReview':
       return (
         <AddReview />
-      ); break;
+      );
     case '/findReview':
       return (
         <FindGameReview />
-      ); break;
+      );
 
     default:
       return (
         <div >
         </div >
-      ); break;
+      );
   }
 
 }
@@ -36,4 +36,3 @@ function Middle({ match }) {
 
 
 export default Middle;
-

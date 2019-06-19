@@ -1,44 +1,46 @@
 .wrapper {
-    height: 10%;
-    width: 100%;
-    position: fixed;
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  background: #242526;
+  z-index: 9999;
 }
 
 .topHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .material-icons {
-    display: flex;
-    flex-direction: row-reverse;
-    color: whitesmoke;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  color: whitesmoke;
+  cursor: pointer;
 }
 
 .logo {
-    color: whitesmoke;
-    cursor: pointer;
-    width: fit-content;
-    height: fit-content;
-    margin-left: 10px;
+  color: whitesmoke;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 10px;
 }
 
 .profileButton {
-    width: fit-content;
-    height: fit-content;
-    margin-right: 10px;
-    display: flex;
-    justify-content: space-between;
+  width: fit-content;
+  height: fit-content;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu-container {
-    display: flex;
+  display: flex;
 }
 
 a {
-    text-decoration: unset !important;
-    margin-left: 5px;
+  text-decoration: unset !important;
+  margin-left: 5px;
 }
