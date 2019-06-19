@@ -4,11 +4,12 @@ h1 {
 
 .middle {
     padding-top: 40px;
+    padding-bottom: 20px;
+    overflow: auto;
 }
 
 .InjectedContent {
     scroll-behavior: auto;
-    height: 70%;
 }
 
 .superCard {
@@ -72,6 +73,7 @@ h1 {
     transform: scale(1);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    translate: scale(2, 2);
     transition: -webkit-transform 0.25s ease-out;
     transition: transform 0.25s ease-out;
     transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;

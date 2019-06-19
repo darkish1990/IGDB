@@ -12,27 +12,21 @@ function Middle({ match }) {
 
     case '/latestReviews':
       return (
-        <div className='middle'>
-          <LatestReviews />
-        </div>
+        <LatestReviews />
       ); break;
     case '/addReview':
       return (
-        <div className='middle'>
-          <AddReview />
-        </div>
+        <AddReview />
       ); break;
     case '/findReview':
       return (
-        <div className='middle'>
-          <FindGameReview />
-        </div>
+        <FindGameReview />
       ); break;
 
     default:
       return (
-        <div className='middle'>
-        </div>
+        <div >
+        </div >
       ); break;
   }
 
