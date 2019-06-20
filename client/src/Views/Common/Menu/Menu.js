@@ -6,10 +6,10 @@ function Menu() {
 
   return (
     <div className="menu" >
-      <div className='divButtons'><Link to={'/latestReviews'}>Latest Reviews</Link></div>
-      <div className='divButtons'><Link to={'/addReview'}>Add A Review</Link></div>
-      <div className='divButtons'><Link to={'/findReview'}>Find Review</Link></div>
-    </div>
+      <Link to={'/latestReviews'} className='divButtons'><div >Latest Reviews</div></Link>
+      <Link to={'/addReview'} className='divButtons'><div >Add A Review</div></Link >
+      <Link to={'/findReview'} className='divButtons'><div >Find Review</div></Link>
+    </div >
   );
 }
 

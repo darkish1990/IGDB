@@ -1,5 +1,5 @@
 .wrapper {
-  height: 10%;
+  height: 12%;
   width: 100%;
   position: fixed;
   background: #242526;
@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50%;
   width: 100%;
 }
 
@@ -20,7 +21,7 @@
   cursor: pointer;
 }
 
-.logo {
+.logoAndLogout {
   color: whitesmoke;
   cursor: pointer;
   width: fit-content;
@@ -38,9 +39,10 @@
 
 .menu-container {
   display: flex;
+  height: 50%;
 }
 
 a {
   text-decoration: unset !important;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }

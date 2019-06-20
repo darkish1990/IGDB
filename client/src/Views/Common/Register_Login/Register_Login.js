@@ -6,6 +6,13 @@ function Register_Login() {
   return (
     <div className="Register_Login" >
       <div></div>
+
+      <button onClick={() => {
+        dispatchchangeUserStatus({
+          type: 'changeUserStatus',
+          payload: { userStatus: true }  //payload
+        })
+      }}></button>
     </div>
   );
 }
