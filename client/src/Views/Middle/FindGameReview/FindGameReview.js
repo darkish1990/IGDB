@@ -5,6 +5,8 @@ import './FindGameReview.css'
 function FindGameReview() {
   return (
     <div className="FindGameReview">
+      <div className="middle">
+
       <div className="InjectedContent">
         <div className="container">
           <SearchBar />
@@ -15,6 +17,7 @@ function FindGameReview() {
             <div class="go-corner" href="#" />
           </a>
         </div>
+      </div>
       </div>
     </div>
   )
