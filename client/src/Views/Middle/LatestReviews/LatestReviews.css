@@ -1,0 +1,9 @@
+.titleContainer {
+    display: flex;
+}
+
+.gamePic {
+    height: 30%;
+    width: 30%;
+    margin-right: 15px;
+}

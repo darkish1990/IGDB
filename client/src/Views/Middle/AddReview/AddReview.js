@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './AddReview.css';
 import { useStateValue } from '../../../Controller/state';
 
 function AddReview() {
+
+  const [pic, setPic] = useState("https://senaparts.com/wp-content/themes/senaparts/images/placeholder-image.png")
+
 
   return (
     <div className="AddReview" >
@@ -13,19 +16,20 @@ function AddReview() {
               <p id="gameNameParagraph">Game Name:</p>
               <input type="text" id="gameName"></input>
               <p id="gameimgParagraph">Image Link: </p>
-              <input type="text" id="gameImg"></input>
+              <input type="text" id="gameImg" onChange={(e) => { setPic(e.target.value) }}></input>
               <p id="gameReviewParagraph">Review: </p>
               <textarea type="text" id="gameReview"></textarea>
               <p id="gameRatingParagraph">Rating (1-5): </p>
               <input type="text" id="gameRating"></input>
               <p hidden="true" id="warningParagraph"></p>
+              <img id="gameImgBox" src={pic}></img>
               <input type="submit" id="submitReviewbtn" value="Review Ready!"></input>
 
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

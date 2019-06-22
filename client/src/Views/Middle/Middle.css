@@ -52,10 +52,11 @@ h1 {
     border: 1px solid whitesmoke;
     text-align: center;
     padding: 32px 24px;
-    margin: 15px;
+    margin-bottom: 15px;
     text-decoration: none;
     z-index: 0;
     overflow: hidden;
+    width: 82%;
 }
 
 .card:before {
@@ -68,8 +69,8 @@ h1 {
     height: 52px;
     width: 52px;
     border-radius: 32px;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(2);
+    transform: scale(2);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     translate: scale(2, 2);

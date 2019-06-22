@@ -13,6 +13,8 @@ function App() {
     password: '',
     userStatus: false
   };
+
+
   const reducer = (state, action) => {
     switch (action.type) {
       case 'changeUserStatus':
@@ -29,6 +31,8 @@ function App() {
         return state;
     }
   };
+
+  
   return (
     <StateProvider appState={appState} reducer={reducer}>
       <Router>

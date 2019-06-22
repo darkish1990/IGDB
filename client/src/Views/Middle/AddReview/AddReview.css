@@ -3,6 +3,11 @@ p {
     margin: 3px;
 }
 
+#gameImgBox {
+    height: 50%;
+    width: 50%;
+}
+
 #gameReview {
     min-height: 80px;
     min-width: 250px;
