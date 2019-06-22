@@ -4,8 +4,6 @@ import { useStateValue } from '../../../Controller/state';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import FullReviews from '../../Common/FullReview/FullReview';
 
-
-
 function LatestReviews() {
   const [cards, setCards] = useState()
 
