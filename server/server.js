@@ -87,6 +87,16 @@ app.get('/LatestReviews', (req, res) => {
 
 })
 
+app.post('/FindGameReview', (req, res) => {
+
+    reviewsModel.find(req.body, function (err, docs) {
+        console.log(docs)
+        res.send(docs);
+    });
+
+
+})
+
 
 
 

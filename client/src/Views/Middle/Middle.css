@@ -3,7 +3,7 @@ h1 {
 }
 
 .middle {
-    padding-top: 95px;
+    padding-top: 115px;
     padding-bottom: 40px;
     overflow: auto;
 }
@@ -55,11 +55,13 @@ h1 {
     margin-bottom: 15px;
     text-decoration: none;
     z-index: 0;
-    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
     width: 82%;
+    height: 30%;
 }
 
-.card:before {
+/* .card:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -77,9 +79,9 @@ h1 {
     transition: -webkit-transform 0.50s ease-out;
     transition: transform 0.50s ease-out;
     transition: transform 0.50s ease-out, -webkit-transform 0.50s ease-out;
-}
+} */
 
-.card:hover:before {
+/* .card:hover:before {
     -webkit-transform: scale(21);
     transform: scale(21);
 }
@@ -87,11 +89,9 @@ h1 {
 .card:hover p {
     transition: all 0.3s ease-out;
     color: rgb(180, 171, 171);
-    height: 100px;
 }
 
 .card:hover h3 {
     transition: all 0.3s ease-out;
     color: rgb(180, 171, 171);
-    height: 100px;
-}
+} */

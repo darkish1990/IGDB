@@ -1,6 +1,7 @@
 p {
     color: whitesmoke;
     margin: 3px;
+    overflow: auto;
 }
 
 #gameImgBox {

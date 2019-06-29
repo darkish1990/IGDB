@@ -13,7 +13,7 @@ function Middle({ match }) {
     case '/latestReviews':
       return (
         <LatestReviews />
-      ); 
+      );
     case '/addReview':
       return (
         <AddReview />
@@ -25,8 +25,7 @@ function Middle({ match }) {
 
     default:
       return (
-        <div >
-        </div >
+        <LatestReviews />
       );
   }
 
