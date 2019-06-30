@@ -4,6 +4,11 @@
   position: fixed;
   background: #242526;
   z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .topHeader {
@@ -39,7 +44,6 @@
 
 .menu-container {
   display: flex;
-  height: 50%;
 }
 
 a {

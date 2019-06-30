@@ -1,14 +1,69 @@
-p {
+.add-review-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+}
+
+.add-review-input {
+  margin-bottom: 10px;
+}
+.input-title {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0;
+}
+
+.add-review-input input,
+textarea {
+  width: 100%;
+  border-radius: 3px;
+  border: 0px;
+}
+.add-review-input input {
+  height: 25px;
+  margin-top: 6px;
+}
+.add-review-input textarea {
+  margin-top: 4px;
+}
+
+#submitReviewbtn {
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #322d2d;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#e21010),
+    to(#950404)
+  );
+  background-image: -webkit-linear-gradient(top, #e21010, #950404);
+  background-image: -moz-linear-gradient(top, #e21010, #950404);
+  background-image: -ms-linear-gradient(top, #e21010, #950404);
+  background-image: -o-linear-gradient(top, #e21010, #950404);
+  background-image: linear-gradient(to bottom, #e21010, #950404);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e21010, endColorstr=#950404);
+}
+
+#gameImgBox {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 0px;
+}
+
+/* p {
     color: whitesmoke;
     margin: 3px;
     overflow: auto;
 }
 
-#gameImgBox {
-    height: 50%;
-    width: 50%;
-}
 
+*/
+/*
 #gameReview {
     min-height: 80px;
     min-width: 250px;
@@ -31,4 +86,4 @@ p {
 #gameRating {
     width: 30px;
     text-align: center;
-}
+} */

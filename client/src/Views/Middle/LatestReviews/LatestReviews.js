@@ -1,51 +1,58 @@
-import React, { useState, useEffect } from 'react'
-import './LatestReviews.css'
-import { useStateValue } from '../../../Model/state';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import FullReviews from '../../Common/FullReview/FullReview';
+import React, { useState, useEffect } from "react";
+import "./LatestReviews.css";
+import { useStateValue } from "../../../Model/state";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import FullReviews from "../../Common/FullReview/FullReview";
+import Footer from "../../Common/Footer/Footer";
 
-function LatestReviews() {
-  const [cards, setCards] = useState([])
+function LatestReviews(props) {
+  const [cards, setCards] = useState([]);
   const [, dispatch] = useStateValue();
 
-
   useEffect(() => {
-    fetch("http://localhost:4000/LatestReviews").then(response => response.json()
-      .then(response => {
-        console.log('here is ur response', response);
-        setCards(response);
-      }).catch(error => console.error('Error:', error)))
-  }, [])
+    fetch("http://localhost:4000/LatestReviews").then(response =>
+      response
+        .json()
+        .then(response => {
+          console.log("here is ur response", response);
+          setCards(response);
+        })
+        .catch(error => console.error("Error:", error))
+    );
+  }, []);
   return (
-    <div className="LatestReviews">
-      <div className="middle">
-        <div className="InjectedContent">
-          <div className="container">
-            {cards.map((card, index) => {
-              return (
-                <Link to={'/FullReview'} className="card" key={index} onClick={() => {
+    <div className="latest-reviews-container">
+      {cards.map((card, index) => {
+        return (
+          <div className="latest-reviews-card-container">
+            <div className="latest-reviews-image-container">
+              <Link
+                to={"/FullReview"}
+                className="card"
+                key={index}
+                onClick={() => {
                   dispatch({
-                    type: 'selectedReviewFromAppState',
+                    type: "selectedReviewFromAppState",
                     payload: { card }
-                  })
-                }}>
-                  <div className="titleContainer">
-                    <img className='gamePic' src={card.img}></img>
-                    <h3>{card.gameName}</h3>
-                  </div>
-                  <p className="small">{card.reviewDescription}</p>
-                  <h5>Created By {card.authorName}</h5>
-                  <div className="dimmer" />
-                  <div className="go-corner" href="#" />
-                </Link>
-              )
-            })
-            }
+                  });
+                }}
+              >
+                <img className="latest-reviews-image" src={card.img} />
+              </Link>
+            </div>
+            <div className="latest-reviews-title">
+              <h3>{card.gameName}</h3>
+            </div>
+            <div className="latest-reviews-text">{card.reviewDescription}</div>
+            <div className="latest-reviews-author">
+              <h5>Created By {card.authorName}</h5>
+            </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
+      <Footer path={"/LatestReviews"} />
     </div>
-  )
+  );
 }
 
-export default LatestReviews
+export default LatestReviews;
