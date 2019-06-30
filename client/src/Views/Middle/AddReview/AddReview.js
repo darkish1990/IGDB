@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './AddReview.css';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import { useStateValue } from '../../../Model/state';
 
 function AddReview() {
@@ -48,7 +49,7 @@ function AddReview() {
               }}></input>
               <p hidden="true" id="warningParagraph"></p>
               <img id="gameImgBox" src={pic}></img>
-              <input type="button" id="submitReviewbtn" value="Review Ready!" onClick={e => AddReviewToDB(newAuthorName, newGameName, pic, newGameReview, newGameRating)}></input>
+              <Link to={'/LatestReviews'}><input type="button" id="submitReviewbtn" value="Review Ready!" onClick={e => AddReviewToDB(newAuthorName, newGameName, pic, newGameReview, newGameRating)}></input></Link>
 
             </div>
           </div>
@@ -76,4 +77,6 @@ function AddReviewToDB(authorName, gameName, pic, review, Rating) {
     .then(response => {
       console.log('here is ur response AddReview', response);
     }).catch(error => console.error('Error:', error)))
+
+
 }

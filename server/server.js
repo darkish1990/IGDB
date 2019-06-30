@@ -79,7 +79,7 @@ if (arguments.includes('createUsers')) {
 
 app.get('/LatestReviews', (req, res) => {
 
-    reviewsModel.find({}, function (err, docs) {
+    reviewsModel.find({}).sort([['date', -1]]).exec(function (err, docs) {
         console.log(docs)
         res.send(docs);
     });
