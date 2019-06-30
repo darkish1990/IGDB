@@ -29,5 +29,6 @@ p {
 }
 
 #gameRating {
-    width: 15px;
+    width: 30px;
+    text-align: center;
 }

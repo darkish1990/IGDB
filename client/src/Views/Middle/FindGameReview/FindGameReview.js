@@ -29,15 +29,19 @@ function FindGameReview() {
               return (
                 <Link to={'/FullReview'} className="card" key={index} onClick={() => {
                   dispatch({
-                    type: 'selectedReviewFromLatest',
+                    type: 'selectedReviewFromAppState',
                     payload: { card }
                   })
                 }}>
                   <div className="titleContainer">
                     <img className='gamePic' src={card.img}></img>
-                    <h3>{card.gameName}</h3>
+                    <h2>{card.gameName}</h2>
                   </div>
-                  <p className="small">{card.reviewDecription}</p>
+
+                  <p className="small">{card.reviewDescription}</p>
+
+                  <h6>Created By {card.authorName}</h6>
+
                   <div className="dimmer" />
                   <div className="go-corner" href="#" />
                 </Link>

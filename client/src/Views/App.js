@@ -11,7 +11,7 @@ import LatestReviews from './Middle/LatestReviews/LatestReviews';
 function App() {
 
   const appState = {
-    selectedReviewFromLatest: {},
+    selectedReviewFromAppState: '',
     FindGameReviewSearchBarValue: '',
 
   };
@@ -19,10 +19,10 @@ function App() {
 
   const reducer = (state, action) => {
     switch (action.type) {
-      case 'selectedReviewFromLatest':
+      case 'selectedReviewFromAppState':
         return {
           ...state,
-          selectedReviewFromLatest: action.payload
+          selectedReviewFromAppState: action.payload
 
         };
       case '':

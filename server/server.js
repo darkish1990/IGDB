@@ -37,7 +37,7 @@ const reviewScheme = new Schema({
     gameName: String,
     rating: Number,
     date: Date,
-    reviewDecription: String,
+    reviewDescription: String,
     id: mongoose.ObjectId
 });
 // const usersScheme = new Schema({
@@ -55,8 +55,8 @@ if (arguments.includes('createReviews')) {
 
 
     // Create an instance of model SomeModel
-    var reviewInstance = new reviewsModel({ authorName: 'awesome', authorLast: "bla", img: "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=beautiful-beauty-blue-414612.jpg&fm=jpg", date: Date.now(), gameName: 'doom3', rating: 3.6, reviewDecription: 'yesh li tsav she korim lo yehoshua' });
-
+    var reviewInstance = new reviewsModel({ authorName: 'awesome', img: "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=beautiful-beauty-blue-414612.jpg&fm=jpg", date: Date.now(), gameName: 'doom3', rating: 3.6, reviewDescription: 'yesh li tsav she korim lo yehoshua' });
+    console.log(reviewInstance)
     // Save the new model instance, passing a callback
     reviewInstance.save(function (err) {
 
@@ -96,7 +96,18 @@ app.post('/FindGameReview', (req, res) => {
 
 
 })
+app.post('/AddReview', (req, res) => {
+    // Create an instance of model SomeModel
+    var reviewInstance = new reviewsModel({ authorName: req.body.objData.authorName, img: req.body.objData.img, date: Date.now(), gameName: req.body.objData.gameName, rating: req.body.objData.rating, reviewDescription: req.body.objData.reviewDescription });
 
+    // Save the new model instance, passing a callback
+    reviewInstance.save(function (err) {
+        res.send({ confirm: true });
+    });
+
+
+
+})
 
 
 

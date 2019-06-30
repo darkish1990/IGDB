@@ -25,7 +25,7 @@ function LatestReviews() {
               return (
                 <Link to={'/FullReview'} className="card" key={index} onClick={() => {
                   dispatch({
-                    type: 'selectedReviewFromLatest',
+                    type: 'selectedReviewFromAppState',
                     payload: { card }
                   })
                 }}>
@@ -33,7 +33,7 @@ function LatestReviews() {
                     <img className='gamePic' src={card.img}></img>
                     <h3>{card.gameName}</h3>
                   </div>
-                  <p className="small">{card.reviewDecription}</p>
+                  <p className="small">{card.reviewDescription}</p>
                   <div className="dimmer" />
                   <div className="go-corner" href="#" />
                 </Link>
