@@ -30,7 +30,7 @@ function FullReview() {
                 <div className="InjectedContent" >
                     <div className="superCard">
                         <div className="container">
-                            <p id="authorNameParagraph">{selectedReviewFromAppState.selectedReviewFromAppState ?
+                            <p id="authorNameParagraph">Created By {selectedReviewFromAppState.selectedReviewFromAppState ?
                                 selectedReviewFromAppState.selectedReviewFromAppState.card.authorName : authorNameFromLocal}</p>
                             <p id="gameNameParagraph">{selectedReviewFromAppState.selectedReviewFromAppState ?
                                 selectedReviewFromAppState.selectedReviewFromAppState.card.gameName : gameNameFromLocal}</p>

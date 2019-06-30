@@ -34,6 +34,7 @@ function LatestReviews() {
                     <h3>{card.gameName}</h3>
                   </div>
                   <p className="small">{card.reviewDescription}</p>
+                  <h5>Created By {card.authorName}</h5>
                   <div className="dimmer" />
                   <div className="go-corner" href="#" />
                 </Link>

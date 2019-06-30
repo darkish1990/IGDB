@@ -19,12 +19,12 @@ function AddReview() {
           <div className="superCard">
             <div className="container">
               <p id="gameNameParagraph">Author Name:</p>
-              <input type="text" id="authorName" onChange={(e) => {
+              <input type="text" id="authorName" isRequierd onChange={(e) => {
                 console.log(e.target.value)
                 setNewAuthorName(e.target.value)
               }}></input>
               <p id="gameNameParagraph">Game Name:</p>
-              <input type="text" id="gameName" onChange={(e) => {
+              <input type="text" id="gameName" isRequierd onChange={(e) => {
                 console.log(e.target.value)
                 setNewGameName(e.target.value)
               }}></input>
@@ -38,18 +38,18 @@ function AddReview() {
                 }
               }}></input>
               <p id="gameReviewParagraph">Review: </p>
-              <textarea type="text" id="gameReview" onChange={(e) => {
+              <textarea type="text" id="gameReview" isRequierd onChange={(e) => {
                 console.log(e.target.value)
                 setNewGameReview(e.target.value)
               }}></textarea>
               <p id="gameRatingParagraph">Rating (1-5): </p>
-              <input type="text" id="gameRating" onChange={(e) => {
+              <input type="text" id="gameRating" isRequierd onChange={(e) => {
                 console.log(e.target.value)
                 setNewgGameRating(e.target.value)
               }}></input>
               <p hidden="true" id="warningParagraph"></p>
               <img id="gameImgBox" src={pic}></img>
-              <Link to={'/LatestReviews'}><input type="button" id="submitReviewbtn" value="Review Ready!" onClick={e => AddReviewToDB(newAuthorName, newGameName, pic, newGameReview, newGameRating)}></input></Link>
+              <Link to={'/LatestReviews'}><input type="submit" id="submitReviewbtn" value="Review Ready!" onClick={e => AddReviewToDB(newAuthorName, newGameName, pic, newGameReview, newGameRating)}></input></Link>
 
             </div>
           </div>

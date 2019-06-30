@@ -40,7 +40,7 @@ function FindGameReview() {
 
                   <p className="small">{card.reviewDescription}</p>
 
-                  <h6>Created By {card.authorName}</h6>
+                  <h5>Created By {card.authorName}</h5>
 
                   <div className="dimmer" />
                   <div className="go-corner" href="#" />
