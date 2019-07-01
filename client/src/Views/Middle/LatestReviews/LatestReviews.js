@@ -24,30 +24,32 @@ function LatestReviews(props) {
     <div className="latest-reviews-container">
       {cards.map((card, index) => {
         return (
-          <div className="latest-reviews-card-container">
-            <div className="latest-reviews-image-container">
-              <Link
-                to={"/FullReview"}
-                className="card"
-                key={index}
-                onClick={() => {
-                  dispatch({
-                    type: "selectedReviewFromAppState",
-                    payload: { card }
-                  });
-                }}
-              >
+          <Link
+            to={"/FullReview"}
+            className="card"
+            key={index}
+            onClick={() => {
+              dispatch({
+                type: "selectedReviewFromAppState",
+                payload: { card }
+              });
+            }}
+          >
+            <div className="latest-reviews-card-container">
+              <div className="latest-reviews-image-container">
                 <img className="latest-reviews-image" src={card.img} />
-              </Link>
+              </div>
+              <div className="latest-reviews-title">
+                <h3>{card.gameName}</h3>
+              </div>
+              <div className="latest-reviews-text">
+                {card.reviewDescription}
+              </div>
+              <div className="latest-reviews-author">
+                <h5>Created By {card.authorName}</h5>
+              </div>
             </div>
-            <div className="latest-reviews-title">
-              <h3>{card.gameName}</h3>
-            </div>
-            <div className="latest-reviews-text">{card.reviewDescription}</div>
-            <div className="latest-reviews-author">
-              <h5>Created By {card.authorName}</h5>
-            </div>
-          </div>
+          </Link>
         );
       })}
       <Footer path={"/LatestReviews"} />

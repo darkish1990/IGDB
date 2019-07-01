@@ -32,32 +32,32 @@ function FindGameReview(props) {
         </div>
         {cards.map((card, index) => {
           return (
-            <div className="find-game-review-card-container">
-              <div className="find-game-review-image-container">
-                <Link
-                  to={"/FullReview"}
-                  className="card"
-                  key={index}
-                  onClick={() => {
-                    dispatch({
-                      type: "selectedReviewFromAppState",
-                      payload: { card }
-                    });
-                  }}
-                >
+            <Link
+              to={"/FullReview"}
+              className="card"
+              key={index}
+              onClick={() => {
+                dispatch({
+                  type: "selectedReviewFromAppState",
+                  payload: { card }
+                });
+              }}
+            >
+              <div className="find-game-review-card-container">
+                <div className="find-game-review-image-container">
                   <img className="find-game-review-image" src={card.img} />
-                </Link>
+                </div>
+                <div className="find-game-review-title">
+                  <h3>{card.gameName}</h3>
+                </div>
+                <div className="find-game-review-text">
+                  {card.reviewDescription}
+                </div>
+                <div className="find-game-review-author">
+                  <h5>Created By {card.authorName}</h5>
+                </div>
               </div>
-              <div className="find-game-review-title">
-                <h3>{card.gameName}</h3>
-              </div>
-              <div className="find-game-review-text">
-                {card.reviewDescription}
-              </div>
-              <div className="find-game-review-author">
-                <h5>Created By {card.authorName}</h5>
-              </div>
-            </div>
+            </Link>
           );
         })}
       </div>
