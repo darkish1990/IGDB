@@ -14,26 +14,26 @@ function FindGameReview(props) {
   const [searchValue, setSearchValue] = useState([]);
 
   return (
-    <div className="LatestReviews">
-      <div className="middle">
-        <div className="InjectedContent">
-          <div className="container">
-            <div className="SearchBar">
-              <input
-                type="search"
-                id="searchTextArea"
-                placeholder="Which Game ?"
-                onKeyUp={e => setSearchValue(e.target.value)}
-              />
-              <i
-                className="material-icons"
-                onClick={e => SearchClicked(searchValue, setCards, cards)}
-              >
-                search
-              </i>
-            </div>
-            {cards.map((card, index) => {
-              return (
+    <>
+      <div className="find-game-review-container">
+        <div className="find-game-review-search-bar">
+          <input
+            type="search"
+            id="searchTextArea"
+            placeholder="Which Game ?"
+            onKeyUp={e => setSearchValue(e.target.value)}
+          />
+          <i
+            className="material-icons"
+            onClick={e => SearchClicked(searchValue, setCards, cards)}
+          >
+            search
+          </i>
+        </div>
+        {cards.map((card, index) => {
+          return (
+            <div className="find-game-review-card-container">
+              <div className="find-game-review-image-container">
                 <Link
                   to={"/FullReview"}
                   className="card"
@@ -45,25 +45,25 @@ function FindGameReview(props) {
                     });
                   }}
                 >
-                  <div className="titleContainer">
-                    <img className="gamePic" src={card.img} />
-                    <h2>{card.gameName}</h2>
-                  </div>
-
-                  <p className="small">{card.reviewDescription}</p>
-
-                  <h5>Created By {card.authorName}</h5>
-
-                  <div className="dimmer" />
-                  <div className="go-corner" href="#" />
+                  <img className="find-game-review-image" src={card.img} />
                 </Link>
-              );
-            })}
-          </div>
-        </div>
+              </div>
+              <div className="find-game-review-title">
+                <h3>{card.gameName}</h3>
+              </div>
+              <div className="find-game-review-text">
+                {card.reviewDescription}
+              </div>
+              <div className="find-game-review-author">
+                <h5>Created By {card.authorName}</h5>
+              </div>
+            </div>
+          );
+        })}
       </div>
+
       <Footer path={"/FindGameReview"} />
-    </div>
+    </>
   );
 }
 
