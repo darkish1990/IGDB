@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./AddReview.css";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import { useStateValue } from "../../../Model/state";
+import { Link } from "react-router-dom";
 import Footer from "../../Common/Footer/Footer";
 
 function AddReview(props) {

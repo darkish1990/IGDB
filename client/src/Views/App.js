@@ -1,10 +1,9 @@
 import "./App.css";
 import { StateProvider } from "../Model/state";
 import Header from "./Common/Header/Header";
-import Footer from "./Common/Footer/Footer";
 import Middle from "./Middle/Middle";
-import React, { Component } from "react";
-import { Router, Link, Route } from "react-router-dom";
+import React from "react";
+import { Router, Route } from "react-router-dom";
 import createBrowserHistory from "history/createBrowserHistory";
 import FullReview from "./Common/FullReview/FullReview";
 import LatestReviews from "./Middle/LatestReviews/LatestReviews";

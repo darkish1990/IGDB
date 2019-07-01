@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./LatestReviews.css";
 import { useStateValue } from "../../../Model/state";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import FullReviews from "../../Common/FullReview/FullReview";
+import { Link } from "react-router-dom";
 import Footer from "../../Common/Footer/Footer";
 
 function LatestReviews(props) {

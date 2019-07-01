@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./FindGameReview.css";
 import { useStateValue } from "../../../Model/state";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import FullReviews from "../../Common/FullReview/FullReview";
+import { Link } from "react-router-dom";
 import Footer from "../../Common/Footer/Footer";
-
-import SearchBar from "../../Common/SearchBar/SearchBar";
 
 function FindGameReview(props) {
   const [, dispatch] = useStateValue();
@@ -61,7 +58,6 @@ function FindGameReview(props) {
           );
         })}
       </div>
-
       <Footer path={"/FindGameReview"} />
     </>
   );

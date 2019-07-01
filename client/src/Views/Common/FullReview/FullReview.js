@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./FullReview.css";
 import { useStateValue } from "../../../Model/state";
 import { useLocalState } from "../../../Model/localStorageHook";
