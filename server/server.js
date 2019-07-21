@@ -19,7 +19,9 @@ app.use(
 console.log(arguments);
 
 //connect mongoDB
-const url = "mongodb://localhost:27017/IGDB";
+const url =
+  `mongodb+srv://roey:Guprkhcv1990!@cluster0-jzf8w.mongodb.net/test?retryWrites=true&w=majority` ||
+  "mongodb://localhost:27017/IGDB";
 mongoose.connect(url, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
