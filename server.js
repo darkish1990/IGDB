@@ -19,9 +19,9 @@ app.use(
 console.log(arguments);
 
 //connect mongoDB
-const url =
-  `mongodb+srv://roey:Guprkhcv1990!@cluster0-jzf8w.mongodb.net/test?retryWrites=true&w=majority` ||
-  "mongodb://localhost:27017/IGDB";
+const url = "mongodb://localhost:27017/IGDB"
+  || `mongodb+srv://roey:Guprkhcv1990!@cluster0-jzf8w.mongodb.net/test?retryWrites=true&w=majority`
+  ;
 mongoose.connect(url, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -61,7 +61,7 @@ if (arguments.includes("createReviews")) {
   });
   console.log(reviewInstance);
   // Save the new model instance, passing a callback
-  reviewInstance.save(function(err) {});
+  reviewInstance.save(function (err) { });
   /* 1 */
   reviewInstance = new reviewsModel({
     authorName: "awesome",
@@ -72,7 +72,7 @@ if (arguments.includes("createReviews")) {
     rating: 4.8,
     reviewDescription: "bla bla GTA 5"
   });
-  reviewInstance.save(function(err) {});
+  reviewInstance.save(function (err) { });
   /* 2 */
   reviewInstance = new reviewsModel({
     authorName: "roey",
@@ -84,7 +84,7 @@ if (arguments.includes("createReviews")) {
     reviewDescription:
       "Killing monsters and such \nmichael and belete look at aviv he is waiting for ya all \n\nsup sup u guys "
   });
-  reviewInstance.save(function(err) {});
+  reviewInstance.save(function (err) { });
 
   /* 3 */
   reviewInstance = new reviewsModel({
@@ -98,7 +98,7 @@ if (arguments.includes("createReviews")) {
       "The Best Game eveerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
   });
 
-  reviewInstance.save(function(err) {});
+  reviewInstance.save(function (err) { });
 }
 // if (arguments.includes('createUsers')) {
 //     // create collection (model) with it's schema
@@ -117,14 +117,14 @@ app.get("/LatestReviews", (req, res) => {
   reviewsModel
     .find({})
     .sort([["date", -1]])
-    .exec(function(err, docs) {
+    .exec(function (err, docs) {
       console.log(docs);
       res.send(docs);
     });
 });
 
 app.post("/FindGameReview", (req, res) => {
-  reviewsModel.find(req.body, function(err, docs) {
+  reviewsModel.find(req.body, function (err, docs) {
     console.log(docs);
     res.send(docs);
   });
@@ -141,14 +141,14 @@ app.post("/AddReview", (req, res) => {
   });
 
   // Save the new model instance, passing a callback
-  reviewInstance.save(function(err) {
+  reviewInstance.save(function (err) {
     res.send({ confirm: true });
   });
 });
 
 //#region port
 let port = process.env.port || 4000;
-app.listen(port, function() {
+app.listen(port, function () {
   console.log("server ur on", port);
 });
 //#endregion
