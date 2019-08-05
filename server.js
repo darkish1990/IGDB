@@ -124,10 +124,10 @@ app.get("/LatestReviews", (req, res) => {
 });
 
 app.post("/FindGameReview", (req, res) => {
-  reviewsModel.find(req.body, function (err, docs) {
-    console.log(docs);
+  reviewsModel.find({ 'gameName': { $regex: `^${req.body.gameName}`, $options: "i" } }, function (err, docs) {
+    //console.log(docs);
     res.send(docs);
-  });
+  })
 });
 app.post("/AddReview", (req, res) => {
   // Create an instance of model SomeModel
