@@ -1,5 +1,6 @@
 const express = require("express");
 var cors = require("cors");
+var logger = require('morgan');
 
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -15,6 +16,8 @@ app.use(
     extended: true
   })
 );
+app.use(logger('dev'));
+
 
 console.log(arguments);
 
@@ -59,7 +62,7 @@ if (arguments.includes("createReviews")) {
     rating: 3.6,
     reviewDescription: "yesh li tsav she korim lo yehoshua"
   });
-  console.log(reviewInstance);
+  //console.log(reviewInstance);
   // Save the new model instance, passing a callback
   reviewInstance.save(function (err) { });
   /* 1 */
@@ -118,7 +121,7 @@ app.get("/LatestReviews", (req, res) => {
     .find({})
     .sort([["date", -1]])
     .exec(function (err, docs) {
-      console.log(docs);
+      // console.log(docs);
       res.send(docs);
     });
 });
