@@ -19,12 +19,13 @@ app.use(
 app.use(logger('dev'));
 
 
+
 console.log(arguments);
 
 //connect mongoDB
-const url = "mongodb://localhost:27017/IGDB"
-  || `mongodb+srv://roey:Guprkhcv1990!@cluster0-jzf8w.mongodb.net/test?retryWrites=true&w=majority`
-  ;
+// "mongodb://localhost:27017/IGDB"
+const url = `mongodb+srv://roey:Guprkhcv1990@cluster0-jzf8w.mongodb.net/test?retryWrites=true&w=majority`
+
 mongoose.connect(url, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -155,3 +156,5 @@ app.listen(port, function () {
   console.log("server ur on", port);
 });
 //#endregion
+
+// module.exports = app
