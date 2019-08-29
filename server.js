@@ -1,7 +1,7 @@
 const express = require("express");
 var cors = require("cors");
 var logger = require('morgan');
-
+var path = require('path');
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const yargs = require("yargs");
@@ -151,7 +151,7 @@ app.post("/Api/AddReview", (req, res) => {
   });
 });
 app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "public/index.html"), function(err) {
+  res.sendFile(path.join(__dirname, "/index.html"), function(err) {
     if (err) {
       res.status(500).send(err);
     }
