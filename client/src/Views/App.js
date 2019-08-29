@@ -40,23 +40,23 @@ function App() {
           <Header />
           <Route
             exact
-            path="/#/"
+            path="/"
             render={() => <LatestReviews history={history} />}
           />
           <Route
-            path="/#/latestReviews"
+            path="/latestReviews"
             render={() => <Middle history={history} />}
           />
           <Route
-            path="/#/addReview"
+            path="/addReview"
             render={() => <Middle history={history} />}
           />
           <Route
-            path="/#/findReview"
+            path="/findReview"
             render={() => <Middle history={history} />}
           />
           <Route
-            path="/#/FullReview"
+            path="/FullReview"
             render={() => <FullReview history={history} />}
           />
         </div>

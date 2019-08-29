@@ -144,6 +144,13 @@ app.post("/Api/AddReview", (req, res) => {
     reviewDescription: req.body.objData.reviewDescription
   });
 
+  app.get("/*", function(req, res) {
+    res.sendFile(path.join(__dirname, "path/to/your/index.html"), function(err) {
+      if (err) {
+        res.status(404).send(err);
+      }
+    });
+  });
   // Save the new model instance, passing a callback
   reviewInstance.save(function (err) {
     res.send({ confirm: true });
