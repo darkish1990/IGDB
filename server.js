@@ -145,11 +145,8 @@ app.post("/Api/AddReview", (req, res) => {
   });
 
   app.get("/*", function(req, res) {
-    res.sendFile(path.join(__dirname, "path/to/your/index.html"), function(err) {
-      if (err) {
-        res.status(500).send(err);
-      }
-    });
+    // res.sendFile(path.join(__dirname, "public/index.html"), function(err) {
+      res.send("hello world")
   });
   // Save the new model instance, passing a callback
   reviewInstance.save(function (err) {
