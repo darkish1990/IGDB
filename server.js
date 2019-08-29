@@ -117,7 +117,7 @@ if (arguments.includes("createReviews")) {
 //     });
 // }
 
-app.get("/LatestReviews", (req, res) => {
+app.get("/Api/LatestReviews", (req, res) => {
   reviewsModel
     .find({})
     .sort([["date", -1]])
@@ -127,13 +127,13 @@ app.get("/LatestReviews", (req, res) => {
     });
 });
 
-app.post("/FindGameReview", (req, res) => {
+app.post("/Api/FindGameReview", (req, res) => {
   reviewsModel.find({ 'gameName': { $regex: `^${req.body.gameName}`, $options: "i" } }, function (err, docs) {
     //console.log(docs);
     res.send(docs);
   })
 });
-app.post("/AddReview", (req, res) => {
+app.post("/Api/AddReview", (req, res) => {
   // Create an instance of model SomeModel
   var reviewInstance = new reviewsModel({
     authorName: req.body.objData.authorName,
