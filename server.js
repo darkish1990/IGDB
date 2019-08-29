@@ -151,7 +151,7 @@ app.post("/AddReview", (req, res) => {
 });
 
 //#region port
-let port = process.env.port || 4000;
+let port = process.ENV.PORT || 4000;
 app.listen(port, function () {
   console.log("server ur on", port);
 });
