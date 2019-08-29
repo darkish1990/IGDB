@@ -9,7 +9,7 @@ function LatestReviews(props) {
   const [, dispatch] = useStateValue();
 
   useEffect(() => {
-    fetch("http://localhost:4000/LatestReviews").then(response =>
+    fetch("/LatestReviews").then(response =>
       response
         .json()
         .then(response => {
