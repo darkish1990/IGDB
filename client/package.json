@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build --dest ../server/public",
+    "build": "react-scripts build ",
+    "postbuild" : "rmdir /S /Q ..\\public && mkdir ..\\public && xcopy build ..\\public /E",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
