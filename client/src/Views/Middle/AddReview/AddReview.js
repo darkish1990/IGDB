@@ -117,7 +117,7 @@ function AddReviewToDB(authorName, gameName, pic, review, Rating) {
   };
   console.log(objData);
 
-  fetch("/Api/AddReview", {
+  fetch("http://localhost:4000/Api/AddReview", {
     method: "POST",
     body: JSON.stringify({ objData }),
     headers: {
