@@ -66,7 +66,7 @@ function FindGameReview(props) {
 export default FindGameReview;
 function SearchClicked(value, settingCards, cards) {
   console.log(value);
-  fetch("/Api/FindGameReview", {
+  fetch("\/Api/FindGameReview", {
     method: "POST",
     body: JSON.stringify({ gameName: value }),
     headers: {

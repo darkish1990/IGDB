@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AddReview.css";
 import { Link } from "react-router-dom";
 import Footer from "../../Common/Footer/Footer";
-
+import no_photo from '../../../Assets/no-photo.jpg';
 function AddReview(props) {
   const [pic, setPic] = useState(
     require("../../../Assets/no-photo.jpg")
