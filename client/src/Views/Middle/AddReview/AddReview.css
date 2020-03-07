@@ -2,11 +2,11 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  margin-top: 75px;
+  margin-top: 125px;
 }
 
 .add-review-input {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .input-title {
   color: white;
@@ -23,7 +23,7 @@ textarea {
 }
 .add-review-input input {
   height: 25px;
-  margin-top: 6px;
+  margin-top: 15px;
 }
 .add-review-input textarea {
   margin-top: 4px;
@@ -55,38 +55,6 @@ textarea {
   margin-bottom: 0px;
 }
 
-/* p {
-    color: whitesmoke;
-    margin: 3px;
-    overflow: auto;
-}
-
-
-*/
-/*
-#gameReview {
-    min-height: 80px;
-    min-width: 250px;
-}
-
-#submitReviewbtn {
-    margin-top: 30px;
-    height: 30px;
-    width: 200px;
-    background-color: #2d2f32;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2f32), to(#1a1a1a));
-    background-image: -webkit-linear-gradient(top, #2d2f32, #1a1a1a);
-    background-image: -moz-linear-gradient(top, #2d2f32, #1a1a1a);
-    background-image: -ms-linear-gradient(top, #2d2f32, #1a1a1a);
-    background-image: -o-linear-gradient(top, #2d2f32, #1a1a1a);
-    background-image: linear-gradient(to bottom, #2d2f32, #1a1a1a);
-    color: whitesmoke;
-}
-
-#gameRating {
-    width: 30px;
-    text-align: center;
-} */
 
 @media only screen and (min-width: 720px){
   .add-review-container {
@@ -95,6 +63,7 @@ textarea {
     flex-direction: column;
     width: 450px;
     margin: auto;
+    margin-top: 130px;
 }
 
 .App {
@@ -111,10 +80,9 @@ textarea {
   background: #242526;
   z-index: 9999;
   top: 0;
-  left: 200px;
+  left:auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* margin: auto; */
 }
 }

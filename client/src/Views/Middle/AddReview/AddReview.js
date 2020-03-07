@@ -5,7 +5,7 @@ import Footer from "../../Common/Footer/Footer";
 
 function AddReview(props) {
   const [pic, setPic] = useState(
-    "https://senaparts.com/wp-content/themes/senaparts/images/placeholder-image.png"
+    require("../../../Assets/no-photo.jpg")
   );
   const [newGameName, setNewGameName] = useState("");
   const [newGameReview, setNewGameReview] = useState("");
@@ -50,7 +50,7 @@ function AddReview(props) {
                 setPic(e.target.value);
               } else {
                 setPic(
-                  "https://senaparts.com/wp-content/themes/senaparts/images/placeholder-image.png"
+                  require("../../../Assets/no-photo.jpg")
                 );
               }
             }}

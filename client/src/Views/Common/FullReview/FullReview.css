@@ -1,5 +1,5 @@
 .full-review-container {
-    margin-top: 75px;
+    margin-top: 108px;
 }
 
 .full-review-card-container {
@@ -17,10 +17,15 @@
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#000000, endColorstr=#45484d);
 }
 
-.full-review-image-container {}
+.full-review-image-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .full-review-image {
-    width: 100%;
+    width: 500px;
     height: 300px;
 }
 
@@ -51,4 +56,11 @@
 
 .full-review-ratings {
     color: white;
+}
+
+
+@media only screen and (min-width: 720px) {
+    .full-review-container {
+        margin-top: 108px;
+    }
 }

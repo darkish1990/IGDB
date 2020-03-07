@@ -1,5 +1,5 @@
 .latest-reviews-container {
-    margin-top: 75px;
+    margin-top: 130px;
     padding: 10px;
 }
 
@@ -50,9 +50,9 @@
 @media only screen and (min-width: 720px) {
     .latest-reviews-container {
         padding: 10px;
-        width: 1000px;
+        /* width: 1000px; */
         margin: auto;
-        margin-top: 100px;
+        margin-top: 130px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
