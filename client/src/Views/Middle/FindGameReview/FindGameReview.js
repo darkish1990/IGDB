@@ -42,7 +42,11 @@ function FindGameReview(props) {
             >
               <div className="find-game-review-card-container">
                 <div className="find-game-review-image-container">
-                  <img className="find-game-review-image" src={card.img} />
+                  <img
+                    className="find-game-review-image"
+                    src={card.img}
+                    alt=""
+                  />
                 </div>
                 <div className="find-game-review-title">
                   <h3>{card.gameName}</h3>
@@ -65,8 +69,7 @@ function FindGameReview(props) {
 
 export default FindGameReview;
 function SearchClicked(value, settingCards, cards) {
-  console.log(value);
-  fetch("\/Api/FindGameReview", {
+  fetch("/Api/FindGameReview", {
     method: "POST",
     body: JSON.stringify({ gameName: value }),
     headers: {
@@ -77,7 +80,6 @@ function SearchClicked(value, settingCards, cards) {
       .json()
       .then(response => {
         console.dir(cards);
-        console.log("here is ur response", response);
         settingCards(response);
         console.dir(cards);
       })

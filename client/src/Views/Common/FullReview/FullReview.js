@@ -33,6 +33,7 @@ function FullReview(props) {
             src={
               selectedReviewCon ? selectedReviewCon.card.img : gameimgFromLocal
             }
+            alt=""
           />
         </div>
         <div className="full-review-title">

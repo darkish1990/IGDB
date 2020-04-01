@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import "./AddReview.css";
 import { Link } from "react-router-dom";
 import Footer from "../../Common/Footer/Footer";
-import no_photo from '../../../Assets/no-photo.jpg';
 function AddReview(props) {
-  const [pic, setPic] = useState(
-    require("../../../Assets/no-photo.jpg")
-  );
+  const [pic, setPic] = useState(require("../../../Assets/no-photo.jpg"));
   const [newGameName, setNewGameName] = useState("");
   const [newGameReview, setNewGameReview] = useState("");
   const [newGameRating, setNewgGameRating] = useState("");
@@ -22,7 +19,6 @@ function AddReview(props) {
             id="authorName"
             required
             onChange={e => {
-              console.log(e.target.value);
               setNewAuthorName(e.target.value);
             }}
           />
@@ -34,7 +30,6 @@ function AddReview(props) {
             id="gameName"
             required
             onChange={e => {
-              console.log(e.target.value);
               setNewGameName(e.target.value);
             }}
           />
@@ -45,13 +40,10 @@ function AddReview(props) {
             type="text"
             id="gameImg"
             onChange={e => {
-              console.log(e.target.value);
               if (e.target.value) {
                 setPic(e.target.value);
               } else {
-                setPic(
-                  require("../../../Assets/no-photo.jpg")
-                );
+                setPic(require("../../../Assets/no-photo.jpg"));
               }
             }}
           />
@@ -63,7 +55,6 @@ function AddReview(props) {
             id="gameReview"
             required
             onChange={e => {
-              console.log(e.target.value);
               setNewGameReview(e.target.value);
             }}
           />
@@ -75,14 +66,13 @@ function AddReview(props) {
             id="gameRating"
             required
             onChange={e => {
-              console.log(e.target.value);
               setNewgGameRating(e.target.value);
             }}
           />
         </div>
         <div className="add-review-input">
           <p hidden="true" id="warningParagraph" />
-          <img id="gameImgBox" src={pic} />
+          <img id="gameImgBox" src={pic} alt="" />
           <Link to={"/LatestReviews"}>
             <input
               type="submit"
@@ -115,7 +105,6 @@ function AddReviewToDB(authorName, gameName, pic, review, Rating) {
     reviewDescription: review,
     rating: Rating
   };
-  console.log(objData);
 
   fetch("/Api/AddReview", {
     method: "POST",
@@ -126,9 +115,7 @@ function AddReviewToDB(authorName, gameName, pic, review, Rating) {
   }).then(response =>
     response
       .json()
-      .then(response => {
-        console.log("here is ur response AddReview", response);
-      })
+      .then(response => {})
       .catch(error => console.error("Error:", error))
   );
 }

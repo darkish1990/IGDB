@@ -13,7 +13,6 @@ function LatestReviews(props) {
       response
         .json()
         .then(response => {
-          console.log("here is ur response", response);
           setCards(response);
         })
         .catch(error => console.error("Error:", error))
@@ -36,7 +35,7 @@ function LatestReviews(props) {
           >
             <div className="latest-reviews-card-container">
               <div className="latest-reviews-image-container">
-                <img className="latest-reviews-image" src={card.img} />
+                <img className="latest-reviews-image" src={card.img} alt="" />
               </div>
               <div className="latest-reviews-title">
                 <h3>{card.gameName}</h3>

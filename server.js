@@ -20,7 +20,6 @@ app.use(logger('dev'));
 
 
 
-console.log(arguments);
 
 //connect mongoDB
 // "mongodb://localhost:27017/IGDB"
@@ -63,7 +62,6 @@ if (arguments.includes("createReviews")) {
     rating: 3.6,
     reviewDescription: "yesh li tsav she korim lo yehoshua"
   });
-  //console.log(reviewInstance);
   // Save the new model instance, passing a callback
   reviewInstance.save(function (err) { });
   /* 1 */
@@ -122,14 +120,12 @@ app.get("/Api/LatestReviews", (req, res) => {
     .find({})
     .sort([["date", -1]])
     .exec(function (err, docs) {
-      // console.log(docs);
       res.send(docs);
     });
 });
 
 app.post("/Api/FindGameReview", (req, res) => {
   reviewsModel.find({ 'gameName': { $regex: `^${req.body.gameName}`, $options: "i" } }, function (err, docs) {
-    //console.log(docs);
     res.send(docs);
   })
 });

@@ -3,7 +3,6 @@ import "./Footer.css";
 
 function Footer(props) {
   useEffect(() => {
-    console.log(props.path);
     switch (props.path) {
       case "/FullReview":
         return setlocation(true);
@@ -13,6 +12,7 @@ function Footer(props) {
         return setlocation(false);
       case "/FindGameReview":
         return setlocation(false);
+        default:
     }
   });
   const [location, setlocation] = useState(false);
