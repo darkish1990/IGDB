@@ -71,7 +71,7 @@ function AddReview(props) {
           />
         </div>
         <div className="add-review-input">
-          <p hidden="true" id="warningParagraph" />
+          <p hidden={true} id="warningParagraph" />
           <img id="gameImgBox" src={pic} alt="" />
           <Link to={"/LatestReviews"}>
             <input

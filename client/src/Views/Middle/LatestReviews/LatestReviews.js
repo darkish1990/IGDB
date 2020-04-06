@@ -23,7 +23,7 @@ function LatestReviews(props) {
       {cards.map((card, index) => {
         return (
           <Link
-            to={"/FullReview"}
+            to={"Api/FullReview"}
             className="card"
             key={index}
             onClick={() => {
