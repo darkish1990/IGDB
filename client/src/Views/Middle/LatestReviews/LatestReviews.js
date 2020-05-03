@@ -3,6 +3,7 @@ import "./LatestReviews.css";
 import { useStateValue } from "../../../Model/state";
 import { Link } from "react-router-dom";
 import Footer from "../../Common/Footer/Footer";
+// import { useFetch } from "../../../Model/useFetch";
 
 function LatestReviews(props) {
   const [cards, setCards] = useState([]);

@@ -6,7 +6,6 @@ import Footer from "../../Common/Footer/Footer";
 
 function FindGameReview(props) {
   const [, dispatch] = useStateValue();
-
   const [cards, setCards] = useState([]);
   const [searchValue, setSearchValue] = useState([]);
 
@@ -69,7 +68,7 @@ function FindGameReview(props) {
 
 export default FindGameReview;
 function SearchClicked(value, settingCards, cards) {
-  fetch("Api/FindGameReview", {
+  fetch("/Api/FindGameReview", {
     method: "POST",
     body: JSON.stringify({ gameName: value }),
     headers: {

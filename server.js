@@ -8,7 +8,7 @@ const yargs = require("yargs");
 const arguments = yargs.argv._;
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(
